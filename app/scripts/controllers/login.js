@@ -3,7 +3,8 @@
 angular.module('stormpathIdpApp')
   .controller('LoginCtrl', function ($scope,Stormpath,$window) {
     $scope.ready = false;
-    $scope.canRegister = true;
+    // $scope.canRegister = true;
+    $scope.canRegister = false;
     $scope.errors = {
       badLogin: false,
       notFound: false,
@@ -17,7 +18,7 @@ angular.module('stormpathIdpApp')
       $scope.organizationNameKey = Stormpath.getOrganizationNameKey();
       $scope.showOrganizationField = Stormpath.client.jwtPayload.sof;
       $scope.disableOrganizationField = $scope.organizationNameKey !== '';
-      $scope.canRegister = !!Stormpath.idSiteModel.passwordPolicy;
+      // $scope.canRegister = !!Stormpath.idSiteModel.passwordPolicy;
       $scope.providers = Stormpath.providers;
       $scope.ready = true;
       $scope.hasProviders = $scope.providers.length > 0;
