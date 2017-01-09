@@ -28,40 +28,30 @@
     <!-- endbuild -->
   </head>
   <body ng-app="stormpathIdpApp">
-    <div class="container">
-      <div class="row">
-        <h1>The INTER[action] 2016 appointments setting period is now closed.
-          You will receive your appointments via the mobile app next week. If
-          you did not get the opportunity to request appointments, the system
-          will schedule your allotted number of appointments on your
-          behalf.</h1>
-      </div>
-    </div>
-
-    <!--<script type="text/ng-template" id="views/login.html">-->
-    <!--  include "views/login.html"-->
-    <!--</script>-->
-    <!--<script type="text/ng-template" id="views/registration.html">-->
-    <!--  include "views/registration.html"-->
-    <!--</script>-->
-    <!--<script type="text/ng-template" id="views/forgot.html">-->
-    <!--  include "views/forgot.html"-->
-    <!--</script>-->
-    <!--<script type="text/ng-template" id="views/reset.html">-->
-    <!--  include "views/reset.html"-->
-    <!--</script>-->
-    <!--<script type="text/ng-template" id="views/verify.html">-->
-    <!--  include "views/verify.html"-->
-    <!--</script>-->
-    <!--<script type="text/ng-template" id="views/unverified.html">-->
-    <!--  include "views/unverified.html"-->
-    <!--</script>-->
-    <!--<script type="text/ng-template" id="views/error.html">-->
-    <!--  include "views/error.html"-->
-    <!--</script>-->
-    <!--<script type="text/ng-template" id="views/password-error-messages.html">-->
-    <!--  include "views/password-error-messages.html"-->
-    <!--</script>-->
+    <script type="text/ng-template" id="views/login.html">
+      include "views/login.html"
+    </script>
+    <script type="text/ng-template" id="views/registration.html">
+      include "views/registration.html"
+    </script>
+    <script type="text/ng-template" id="views/forgot.html">
+      include "views/forgot.html"
+    </script>
+    <script type="text/ng-template" id="views/reset.html">
+      include "views/reset.html"
+    </script>
+    <script type="text/ng-template" id="views/verify.html">
+      include "views/verify.html"
+    </script>
+    <script type="text/ng-template" id="views/unverified.html">
+      include "views/unverified.html"
+    </script>
+    <script type="text/ng-template" id="views/error.html">
+      include "views/error.html"
+    </script>
+    <script type="text/ng-template" id="views/password-error-messages.html">
+      include "views/password-error-messages.html"
+    </script>
 
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -75,19 +65,6 @@
       <div ng-show="inError" ng-include="'views/error.html'"></div>
       <div ng-hide="inError" ng-view="">
         <!-- this will be replaced a the view, as determined by the route config in app.js -->
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <a class="sublink" href="https://storage.googleapis.com/assets.stage.ai/terms.pdf">Terms and Conditions</a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <a class="sublink" href="https://storage.googleapis.com/assets.stage.ai/privacy.pdf">Privacy Policy</a>
-        </div>
       </div>
     </div>
 
