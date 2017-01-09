@@ -14,21 +14,6 @@ angular.module('stormpathIdpApp')
       organizationNameKeyInvalid: false
     };
 
-    Stormpath.init.then(function initSuccess(){
-      $scope.organizationNameKey = Stormpath.getOrganizationNameKey();
-      $scope.showOrganizationField = Stormpath.client.jwtPayload.sof;
-      $scope.disableOrganizationField = $scope.organizationNameKey !== '';
-      // $scope.canRegister = !!Stormpath.idSiteModel.passwordPolicy;
-      $scope.providers = Stormpath.providers;
-      $scope.ready = true;
-      $scope.hasProviders = $scope.providers.length > 0;
-      if(Stormpath.getProvider('facebook')){
-        initFB();
-      }
-    });
-
-    var googleIsSignedIn = false;
-
     function initFB(){
       $window.fbAsyncInit = function() {
         var FB = $window.FB;
@@ -50,6 +35,21 @@ angular.module('stormpathIdpApp')
         fjs.parentNode.insertBefore(js, fjs);
       }($window.document, 'script', 'facebook-jssdk'));
     }
+
+    Stormpath.init.then(function initSuccess(){
+      $scope.organizationNameKey = Stormpath.getOrganizationNameKey();
+      $scope.showOrganizationField = Stormpath.client.jwtPayload.sof;
+      $scope.disableOrganizationField = $scope.organizationNameKey !== '';
+      $scope.canRegister = !!Stormpath.idSiteModel.passwordPolicy;
+      $scope.providers = Stormpath.providers;
+      $scope.ready = true;
+      $scope.hasProviders = $scope.providers.length > 0;
+      if(Stormpath.getProvider('facebook')){
+        initFB();
+      }
+    });
+
+    var googleIsSignedIn = false;
 
     function clearErrors(){
       Object.keys($scope.errors).map(function(k){$scope.errors[k]=false;});
