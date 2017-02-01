@@ -23,6 +23,10 @@
           <div class="email-password-area  col-xs-12" ng-class="[hasProviders ? 'small col-sm-8' : 'large col-sm-12']">
             <div class="header">
               <span>Log In</span>
+              <span ng-show="canRegister" wd-can-register>
+                <span> or </span>
+                <a href="#register">Create an Account</a>
+              </span>
 
             </div>
             <div class="alert alert-danger bad-login" ng-show="errors.badLogin">
@@ -86,6 +90,9 @@
           </div>
 
         </div>
+
+        <a class="forgot" href="#forgot">Forgot Password?</a>
+
       </div>
 
     </script>
@@ -580,11 +587,9 @@
       <small class="help-block" ng-show="errors.requireUpperCase" wd-requireUpperCase>Password requires a uppercase letter</small>
       <small class="help-block" ng-show="errors.requireLowerCase" wd-requireLowerCase>Password requires a lowercase letter</small>
     </script>
-
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
 
     <div class="container" ng-controller="ErrorCtrl" ng-cloak>
       <div class="logo-container">
