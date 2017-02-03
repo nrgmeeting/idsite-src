@@ -50,6 +50,7 @@ angular.module('stormpathIdpApp')
             var m = idSiteModel;
             self.idSiteModel = m;
             self.providers = self.providers.concat(m.providers);
+            console.log(idSiteModel);
             $rootScope.logoUrl = m.logoUrl;
             init.resolve();
             // If the initial JWT has account scope, it means that the user
